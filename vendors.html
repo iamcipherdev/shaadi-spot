@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vendors — ShaadiSpot</title>
+<meta name="description" content="Browse wedding halls, photographers, makeup artists, caterers and decorators in Daska and Sialkot.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap nav-in">
+  <a class="brand" href="index.html">Shaadi<em>Spot</em></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="vendors.html" class="active">Vendors</a>
+    <a href="vendors.html?city=Daska">Daska</a>
+    <a href="vendors.html?city=Sialkot">Sialkot</a>
+    <a href="list-business.html" class="nav-cta">List Business</a>
+  </div>
+</div></nav>
+
+<main class="wrap">
+  <section class="sec" style="padding-top:44px">
+    <p class="eyebrow">Find your vendor</p>
+    <h1 style="font-size:clamp(30px,4.5vw,44px);margin:10px 0 24px">Browse vendors</h1>
+    <form class="searchbar" id="filterSearch" style="margin:0 0 8px;max-width:100%">
+      <select name="city" id="fCity" aria-label="City">
+        <option value="">All Cities</option>
+        <option value="Daska">Daska</option>
+        <option value="Sialkot">Sialkot</option>
+      </select>
+      <input name="q" id="fQ" placeholder="Search name or area…" autocomplete="off">
+      <button type="submit">Search</button>
+    </form>
+    <div class="pills" id="catPills" style="margin-top:14px"></div>
+    <p class="count" id="count"></p>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" style="display:none"><p>No vendors match. Try a different search.</p></div>
+  </section>
+</main>
+
+<footer><div class="wrap foot-in">
+  <span><b style="font-family:var(--serif);color:var(--ink)">ShaadiSpot</b> — Daska · Sialkot wedding vendors</span>
+  <span>Made with care in Punjab, Pakistan</span>
+</div></footer>
+
+<script src="js/app.js"></script>
+<script>SS.listing();</script>
+</body>
+</html>
